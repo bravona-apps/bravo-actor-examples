@@ -7,17 +7,12 @@
  */
 
 import { ApifyClient } from 'apify-client';
+import { requireToken, startAndWait } from '../shared.js';
 
 const ACTOR = 'bravona/steam-reviews-and-store-data';
 const STORE_PAGE = 'https://apify.com/bravona/steam-reviews-and-store-data';
 
-const token = process.env.APIFY_TOKEN;
-if (!token) {
-  console.error('Set the APIFY_TOKEN environment variable. See .env.example.');
-  process.exit(1);
-}
-
-const client = new ApifyClient({ token });
+const client = new ApifyClient({ token: requireToken() });
 const runInput = {
   appIds: [570],
   mode: 'both',
@@ -27,13 +22,10 @@ const runInput = {
   country: 'us',
 };
 
-console.log(`Starting ${ACTOR} ...`);
-console.log(`Pricing: see ${STORE_PAGE}`);
-
-const run = await client.actor(ACTOR).call(runInput, { log: null });
-const datasetId = run.defaultDatasetId;
+const run = await startAndWait(client, ACTOR, runInput, STORE_PAGE);
 console.log(`Run ${run.id} finished with status ${run.status}.`);
 
+const datasetId = run.defaultDatasetId;
 const { items } = await client.dataset(datasetId).listItems();
 console.log(`Dataset ${datasetId} has ${items.length} item(s).`);
 

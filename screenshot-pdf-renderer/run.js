@@ -7,17 +7,12 @@
  */
 
 import { ApifyClient } from 'apify-client';
+import { requireToken, startAndWait } from '../shared.js';
 
 const ACTOR = 'bravona/screenshot-pdf-renderer';
 const STORE_PAGE = 'https://apify.com/bravona/screenshot-pdf-renderer';
 
-const token = process.env.APIFY_TOKEN;
-if (!token) {
-  console.error('Set the APIFY_TOKEN environment variable. See .env.example.');
-  process.exit(1);
-}
-
-const client = new ApifyClient({ token });
+const client = new ApifyClient({ token: requireToken() });
 const runInput = {
   urls: ['https://example.com'],
   format: 'png',
@@ -28,18 +23,17 @@ const runInput = {
   respectRobotsTxt: true,
 };
 
-console.log(`Starting ${ACTOR} ...`);
-console.log(`Pricing: see ${STORE_PAGE}`);
-
-const run = await client.actor(ACTOR).call(runInput, { log: null });
-const datasetId = run.defaultDatasetId;
+const run = await startAndWait(client, ACTOR, runInput, STORE_PAGE);
 console.log(`Run ${run.id} finished with status ${run.status}.`);
 
+const datasetId = run.defaultDatasetId;
 const { items } = await client.dataset(datasetId).listItems();
 console.log(`Dataset ${datasetId} has ${items.length} item(s).`);
 
 for (const item of items.slice(0, 5)) {
-  console.log(`- ${item.status} ${item.format} ${item.title} ${item.widthPx}x${item.heightPx} ${item.fileUrl}`);
+  console.log(
+    `- ${item.status} ${item.format} ${item.title} ${item.widthPx}x${item.heightPx} ${item.fileUrl}`,
+  );
 }
 if (items.length > 5) {
   console.log(`... plus ${items.length - 5} more`);

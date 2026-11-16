@@ -58,7 +58,7 @@ node academic-papers-search/run.js
 # or: npm run academic
 ```
 
-The same pattern works in every Actor folder. Each script waits for the run to finish without streaming Actor logs, then prints a few dataset items. `sample-output.json` is a static illustration of the dataset shape; running the script talks to the live Actor and returns fresh results.
+The same pattern works in every Actor folder. The scripts start the Actor through `apify-client`, poll run status until it finishes, then print a few dataset items. Shared helpers live in `shared.py` and `shared.js`. `sample-output.json` is a static illustration of the dataset shape; running the script talks to the live Actor and returns fresh results.
 
 ## Workflows
 

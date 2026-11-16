@@ -8,21 +8,20 @@ Pricing: see the Store page https://apify.com/bravona/steam-reviews-and-store-da
 from __future__ import annotations
 
 import json
-import os
 import sys
+from pathlib import Path
 
 from apify_client import ApifyClient
+
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
+from shared import require_token, start_and_wait
 
 ACTOR = "bravona/steam-reviews-and-store-data"
 STORE_PAGE = "https://apify.com/bravona/steam-reviews-and-store-data"
 
 
 def main() -> None:
-    token = os.environ.get("APIFY_TOKEN")
-    if not token:
-        sys.exit("Set the APIFY_TOKEN environment variable. See .env.example.")
-
-    client = ApifyClient(token)
+    client = ApifyClient(require_token())
     run_input = {
         "appIds": [570],
         "mode": "both",
@@ -32,29 +31,27 @@ def main() -> None:
         "country": "us",
     }
 
-    print(f"Starting {ACTOR} ...")
-    print(f"Pricing: see {STORE_PAGE}")
-    run = client.actor(ACTOR).call(run_input=run_input, logger=None)
-    if not run:
-        sys.exit("The Actor call returned no run object.")
-
+    run = start_and_wait(client, ACTOR, run_input, STORE_PAGE)
+    print(f"Run {run.get('id')} finished with status {run.get('status')}.", flush=True)
     dataset_id = run.get("defaultDatasetId")
-    status = run.get("status")
-    print(f"Run {run.get('id')} finished with status {status}.")
     items = list(client.dataset(dataset_id).iterate_items())
-    print(f"Dataset {dataset_id} has {len(items)} item(s).")
+    print(f"Dataset {dataset_id} has {len(items)} item(s).", flush=True)
     for item in items[:5]:
         kind = item.get("itemType")
         if kind == "game-details":
             print(
                 f"- [game-details] {item.get('appName')} (app {item.get('appId')}) "
-                f"{item.get('reviewScoreDesc')} {item.get('storeUrl')}"
+                f"{item.get('reviewScoreDesc')} {item.get('storeUrl')}",
+                flush=True,
             )
         else:
             text = json.dumps((item.get("text") or "")[:120])
-            print(f"- [review] {item.get('appName')}: votedUp={item.get('votedUp')} {text}")
+            print(
+                f"- [review] {item.get('appName')}: votedUp={item.get('votedUp')} {text}",
+                flush=True,
+            )
     if len(items) > 5:
-        print(f"... plus {len(items) - 5} more")
+        print(f"... plus {len(items) - 5} more", flush=True)
 
 
 if __name__ == "__main__":

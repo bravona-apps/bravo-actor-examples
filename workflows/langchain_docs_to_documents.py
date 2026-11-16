@@ -14,11 +14,14 @@ Pricing: see the Store page https://apify.com/bravona/docs-to-markdown-rag
 
 from __future__ import annotations
 
-import os
 import sys
+from pathlib import Path
 
 from apify_client import ApifyClient
 from langchain_core.documents import Document
+
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
+from shared import require_token, start_and_wait
 
 ACTOR = "bravona/docs-to-markdown-rag"
 STORE_PAGE = "https://apify.com/bravona/docs-to-markdown-rag"
@@ -37,18 +40,13 @@ def load_documents(token: str) -> list[Document]:
         "maxPagesPerDocument": 5,
     }
 
-    print(f"Starting {ACTOR} ...")
-    print(f"Pricing: see {STORE_PAGE}")
-    run = client.actor(ACTOR).call(run_input=run_input, logger=None)
-    if not run:
-        sys.exit("The Actor call returned no run object.")
-
+    run = start_and_wait(client, ACTOR, run_input, STORE_PAGE)
     items = list(client.dataset(run["defaultDatasetId"]).iterate_items())
     documents: list[Document] = []
 
     for item in items:
         if item.get("status") != "ok":
-            print(f"Skipping {item.get('source')}: {item.get('errorCode')} {item.get('errorMessage')}")
+            print(f"Skipping {item.get('source')}: {item.get('errorCode')} {item.get('errorMessage')}", flush=True)
             continue
 
         source = item.get("finalUrl") or item.get("fileName") or "unknown"
@@ -83,17 +81,13 @@ def load_documents(token: str) -> list[Document]:
 
 
 def main() -> None:
-    token = os.environ.get("APIFY_TOKEN")
-    if not token:
-        sys.exit("Set the APIFY_TOKEN environment variable. See .env.example.")
-
-    documents = load_documents(token)
-    print(f"Loaded {len(documents)} LangChain document(s).")
+    documents = load_documents(require_token())
+    print(f"Loaded {len(documents)} LangChain document(s).", flush=True)
     for doc in documents:
-        print("---")
-        print(doc.metadata)
+        print("---", flush=True)
+        print(doc.metadata, flush=True)
         preview = doc.page_content[:500]
-        print(preview if preview else "(empty)")
+        print(preview if preview else "(empty)", flush=True)
 
 
 if __name__ == "__main__":
