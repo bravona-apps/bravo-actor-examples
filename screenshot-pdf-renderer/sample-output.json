@@ -1,0 +1,38 @@
+[
+  {
+    "status": "ok",
+    "sourceIndex": 0,
+    "sourceType": "url",
+    "source": "https://example.com",
+    "requestedUrl": "https://example.com",
+    "finalUrl": "https://example.com/",
+    "httpStatus": 200,
+    "title": "Example Domain",
+    "format": "png",
+    "contentType": "image/png",
+    "fileKey": "capture-0000-example-com.png",
+    "fileUrl": "https://api.apify.com/v2/key-value-stores/SAMPLE_STORE_ID/records/capture-0000-example-com.png",
+    "sizeBytes": 97984,
+    "widthPx": 1280,
+    "heightPx": 800,
+    "pageHeightCss": 800,
+    "heightTruncated": false,
+    "pdfPageCount": null,
+    "pdfTruncated": false,
+    "blockedRequests": 0,
+    "pageRequests": 2,
+    "pageTransferBytes": 2023,
+    "heavyPage": false,
+    "warnings": [],
+    "billable": {
+      "capture": 1,
+      "heavy-page": 0
+    },
+    "errorCode": null,
+    "errorMessage": null,
+    "loadMs": 1550,
+    "captureMs": 49,
+    "processingMs": 1780,
+    "capturedAt": "2026-11-04T19:40:21.736Z"
+  }
+]

@@ -1,0 +1,61 @@
+[
+  {
+    "title": "The Heroes of CRISPR",
+    "doi": "10.1016/j.cell.2015.12.041",
+    "pmid": "26771483",
+    "arxivId": null,
+    "openalexId": "W2239190724",
+    "year": 2016,
+    "publishedDate": "2016-01-01",
+    "authors": [
+      "Eric S. Lander"
+    ],
+    "venue": "Cell",
+    "abstract": null,
+    "citedByCount": 493,
+    "isOpenAccess": true,
+    "oaPdfUrl": "http://www.cell.com/article/S0092867415017055/pdf",
+    "concepts": [
+      "Biology",
+      "CRISPR",
+      "Computational biology",
+      "Genetics",
+      "Evolutionary biology"
+    ],
+    "foundIn": [
+      "openalex"
+    ],
+    "sourceUrl": "https://openalex.org/W2239190724",
+    "scrapedAt": "2026-11-02T20:31:11.922Z"
+  },
+  {
+    "title": "The Small, Slow and Specialized CRISPR and Anti-CRISPR of Escherichia and Salmonella",
+    "doi": "10.1371/journal.pone.0011126",
+    "pmid": "20559554",
+    "arxivId": null,
+    "openalexId": "W2062280978",
+    "year": 2010,
+    "publishedDate": "2010-06-15",
+    "authors": [
+      "Marie Touchon",
+      "Eduardo P. C. Rocha"
+    ],
+    "venue": "PLoS ONE",
+    "abstract": "Prokaryotes thrive in spite of the vast number and diversity of their viruses. This partly results from the evolution of mechanisms to inactivate or silence the action of exogenous DNA.",
+    "citedByCount": 237,
+    "isOpenAccess": true,
+    "oaPdfUrl": "https://journals.plos.org/plosone/article/file?id=10.1371/journal.pone.0011126&type=printable",
+    "concepts": [
+      "CRISPR",
+      "Biology",
+      "Genetics",
+      "Genome",
+      "Gene"
+    ],
+    "foundIn": [
+      "openalex"
+    ],
+    "sourceUrl": "https://openalex.org/W2062280978",
+    "scrapedAt": "2026-11-02T20:31:11.922Z"
+  }
+]

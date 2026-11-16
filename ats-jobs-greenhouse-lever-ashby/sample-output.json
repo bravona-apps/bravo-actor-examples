@@ -1,0 +1,54 @@
+[
+  {
+    "company": "ramp",
+    "ats": "ashby",
+    "jobId": "70c26b31-1afb-4fab-b3d3-019261d428c2",
+    "title": "Customer Activation Manager | Accounts Receivable",
+    "department": "Sales",
+    "team": "Customer Success Management",
+    "location": "New York, NY (HQ)",
+    "isRemote": false,
+    "allLocations": [
+      "New York, NY (HQ)"
+    ],
+    "employmentType": "FullTime",
+    "salaryMin": 121000,
+    "salaryMax": 184000,
+    "salaryCurrency": "USD",
+    "salaryPeriod": "year",
+    "salarySource": "structured",
+    "postedAt": "2026-11-02T14:04:22.562Z",
+    "applyUrl": "https://jobs.ashbyhq.com/ramp/70c26b31-1afb-4fab-b3d3-019261d428c2/application",
+    "jobUrl": "https://jobs.ashbyhq.com/ramp/70c26b31-1afb-4fab-b3d3-019261d428c2",
+    "status": "new",
+    "firstSeenAt": "2026-11-02T20:31:11.511Z",
+    "lastSeenAt": "2026-11-02T20:31:11.511Z",
+    "scrapedAt": "2026-11-02T20:31:11.511Z"
+  },
+  {
+    "company": "ramp",
+    "ats": "ashby",
+    "jobId": "318e7138-151e-4ed2-8b85-a017d234ef12",
+    "title": "Manager, Mid-Market Solutions Consulting",
+    "department": "Sales",
+    "team": "Solutions Consulting",
+    "location": "New York, NY (HQ)",
+    "isRemote": false,
+    "allLocations": [
+      "New York, NY (HQ)"
+    ],
+    "employmentType": "FullTime",
+    "salaryMin": 195000,
+    "salaryMax": 298000,
+    "salaryCurrency": "USD",
+    "salaryPeriod": "year",
+    "salarySource": "structured",
+    "postedAt": "2026-10-31T19:31:59.653Z",
+    "applyUrl": "https://jobs.ashbyhq.com/ramp/318e7138-151e-4ed2-8b85-a017d234ef12/application",
+    "jobUrl": "https://jobs.ashbyhq.com/ramp/318e7138-151e-4ed2-8b85-a017d234ef12",
+    "status": "new",
+    "firstSeenAt": "2026-11-02T20:31:11.511Z",
+    "lastSeenAt": "2026-11-02T20:31:11.511Z",
+    "scrapedAt": "2026-11-02T20:31:11.511Z"
+  }
+]

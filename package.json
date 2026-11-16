@@ -1,0 +1,21 @@
+{
+  "name": "bravo-actor-examples",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Runnable Python and Node.js examples for Bravona's public Apify Actors",
+  "type": "module",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "academic": "node academic-papers-search/run.js",
+    "steam": "node steam-reviews-and-store-data/run.js",
+    "ats": "node ats-jobs-greenhouse-lever-ashby/run.js",
+    "docs": "node docs-to-markdown-rag/run.js",
+    "screenshot": "node screenshot-pdf-renderer/run.js",
+    "remote-jobs": "node remote-jobs-multi-board-feed/run.js"
+  },
+  "dependencies": {
+    "apify-client": "^2.11.0"
+  }
+}

@@ -1,0 +1,85 @@
+[
+  {
+    "itemType": "game-details",
+    "appId": 570,
+    "appName": "Dota 2",
+    "type": "game",
+    "shortDescription": "Every day, millions of players worldwide enter battle as one of over a hundred Dota heroes.",
+    "developers": [
+      "Valve"
+    ],
+    "publishers": [
+      "Valve"
+    ],
+    "releaseDate": "Jul 9, 2013",
+    "releaseDateIso": "2013-07-09",
+    "comingSoon": false,
+    "isFree": true,
+    "priceInitial": null,
+    "priceFinal": null,
+    "discountPercent": null,
+    "currency": null,
+    "country": "us",
+    "platforms": {
+      "windows": true,
+      "mac": true,
+      "linux": true
+    },
+    "genres": [
+      "Action",
+      "Strategy",
+      "Free To Play"
+    ],
+    "categories": [
+      "Multi-player",
+      "Co-op",
+      "Steam Trading Cards"
+    ],
+    "metacriticScore": 90,
+    "recommendationsTotal": 14371,
+    "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/570/header.jpg",
+    "storeUrl": "https://store.steampowered.com/app/570",
+    "summaryLanguage": "english",
+    "summaryFilter": "recent",
+    "reviewScore": 8,
+    "reviewScoreDesc": "Very Positive",
+    "totalPositive": 12000,
+    "totalNegative": 1500,
+    "totalReviews": 13500,
+    "positivePct": 88.9,
+    "allLanguagesReviewScore": 8,
+    "allLanguagesReviewScoreDesc": "Very Positive",
+    "allLanguagesTotalPositive": 25000,
+    "allLanguagesTotalNegative": 3000,
+    "allLanguagesTotalReviews": 28000,
+    "allLanguagesPositivePct": 89.3,
+    "scrapedAt": "2026-11-02T21:16:15.629Z"
+  },
+  {
+    "itemType": "review",
+    "appId": 570,
+    "appName": "Dota 2",
+    "reviewId": "sample-0001",
+    "votedUp": true,
+    "text": "Sample review written for this examples repository. Dota 2 is a free-to-play MOBA.",
+    "language": "english",
+    "playtimeAtReviewHrs": 12.5,
+    "playtimeForeverHrs": 12.5,
+    "votesUp": 0,
+    "votesFunny": 0,
+    "weightedVoteScore": 0.5,
+    "commentCount": 0,
+    "steamPurchase": true,
+    "receivedForFree": false,
+    "earlyAccess": false,
+    "writtenDuringEarlyAccess": false,
+    "primarilySteamDeck": false,
+    "refunded": false,
+    "developerResponse": null,
+    "developerRespondedAt": null,
+    "createdAt": "2026-11-02T21:07:44.000Z",
+    "updatedAt": "2026-11-02T21:07:44.000Z",
+    "sourceUrl": "https://store.steampowered.com/app/570",
+    "scrapedAt": "2026-11-02T21:16:15.629Z"
+  }
+]

@@ -1,0 +1,60 @@
+[
+  {
+    "status": "ok",
+    "sourceIndex": 0,
+    "source": {
+      "type": "url",
+      "url": "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf"
+    },
+    "finalUrl": "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf",
+    "fileName": "dummy.pdf",
+    "contentType": "application/pdf",
+    "format": "pdf",
+    "sizeBytes": 13264,
+    "sha256": "3df79d34abbca99308e79cb94461c1893582604d68329a41fd4bec1885e6adb4",
+    "title": null,
+    "author": "Evangelos Vlachogiannis",
+    "pageUnit": "pdf-page",
+    "pageCountInFile": 1,
+    "pagesProcessed": 1,
+    "textPages": 1,
+    "ocrPages": 0,
+    "ocrSkippedPages": 0,
+    "truncated": false,
+    "chars": 14,
+    "markdown": "Dummy PDF file",
+    "pages": [
+      {
+        "pageNumber": 1,
+        "markdown": "Dummy PDF file",
+        "chars": 14,
+        "ocr": false,
+        "ocrConfidence": null,
+        "ocrSkipped": false
+      }
+    ],
+    "chunks": [
+      {
+        "chunkIndex": 0,
+        "text": "Dummy PDF file",
+        "chars": 14,
+        "pageStart": 1,
+        "pageEnd": 1,
+        "headingPath": []
+      }
+    ],
+    "chunkCount": 1,
+    "warnings": [],
+    "billable": {
+      "document": 1,
+      "page": 1,
+      "ocrPage": 0
+    },
+    "fullRecordKey": null,
+    "fullRecordUrl": null,
+    "errorCode": null,
+    "errorMessage": null,
+    "processingMs": 1157,
+    "convertedAt": "2026-11-04T17:37:34.854Z"
+  }
+]

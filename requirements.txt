@@ -1,0 +1,5 @@
+# Actor examples
+apify-client>=1.8.0,<2
+
+# LangChain workflow (workflows/langchain_docs_to_documents.py)
+langchain-core>=0.3.0
