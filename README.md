@@ -58,7 +58,7 @@ node academic-papers-search/run.js
 # or: npm run academic
 ```
 
-The same pattern works in every Actor folder. `sample-output.json` is a static illustration of the dataset shape; running the script talks to the live Actor and returns fresh results.
+The same pattern works in every Actor folder. Each script waits for the run to finish without streaming Actor logs, then prints a few dataset items. `sample-output.json` is a static illustration of the dataset shape; running the script talks to the live Actor and returns fresh results.
 
 ## Workflows
 

@@ -33,7 +33,7 @@ const runInput = {
 console.log(`Starting ${ACTOR} ...`);
 console.log(`Pricing: see ${STORE_PAGE}`);
 
-const run = await client.actor(ACTOR).call(runInput);
+const run = await client.actor(ACTOR).call(runInput, { log: null });
 const datasetId = run.defaultDatasetId;
 console.log(`Run ${run.id} finished with status ${run.status}.`);
 

@@ -39,7 +39,7 @@ def load_documents(token: str) -> list[Document]:
 
     print(f"Starting {ACTOR} ...")
     print(f"Pricing: see {STORE_PAGE}")
-    run = client.actor(ACTOR).call(run_input=run_input)
+    run = client.actor(ACTOR).call(run_input=run_input, logger=None)
     if not run:
         sys.exit("The Actor call returned no run object.")
 
